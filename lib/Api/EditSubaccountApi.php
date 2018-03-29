@@ -1,6 +1,6 @@
 <?php
 /**
- * CreditApi
+ * EditSubaccountApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Isendpro\Configuration;
 use \Isendpro\ObjectSerializer;
 
 /**
- * CreditApi Class Doc Comment
+ * EditSubaccountApi Class Doc Comment
  *
  * @category Class
  * @package  Isendpro
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CreditApi
+class EditSubaccountApi
 {
     /**
      * API Client
@@ -79,7 +79,7 @@ class CreditApi
      *
      * @param \Isendpro\ApiClient $apiClient set the API client
      *
-     * @return CreditApi
+     * @return EditSubaccountApi
      */
     public function setApiClient(\Isendpro\ApiClient $apiClient)
     {
@@ -88,43 +88,37 @@ class CreditApi
     }
 
     /**
-     * Operation getCredit
+     * Operation subaccountEdit
      *
-     * Interrogation credit
+     * Edit a subaccount
      *
-     * @param string $keyid Clé API (required)
-     * @param string $credit Type de reponse demandée, 1 pour euro, 2 pour euro + estimation quantité (required)
+     * @param \Isendpro\Model\SubaccountRequest $editsubaccountrequest edit sub account request (required)
      * @throws \Isendpro\ApiException on non-2xx response
-     * @return \Isendpro\Model\CreditResponse
+     * @return \Isendpro\Model\SubaccountResponse
      */
-    public function getCredit($keyid, $credit)
+    public function subaccountEdit($editsubaccountrequest)
     {
-        list($response) = $this->getCreditWithHttpInfo($keyid, $credit);
+        list($response) = $this->subaccountEditWithHttpInfo($editsubaccountrequest);
         return $response;
     }
 
     /**
-     * Operation getCreditWithHttpInfo
+     * Operation subaccountEditWithHttpInfo
      *
-     * Interrogation credit
+     * Edit a subaccount
      *
-     * @param string $keyid Clé API (required)
-     * @param string $credit Type de reponse demandée, 1 pour euro, 2 pour euro + estimation quantité (required)
+     * @param \Isendpro\Model\SubaccountRequest $editsubaccountrequest edit sub account request (required)
      * @throws \Isendpro\ApiException on non-2xx response
-     * @return array of \Isendpro\Model\CreditResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Isendpro\Model\SubaccountResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCreditWithHttpInfo($keyid, $credit)
+    public function subaccountEditWithHttpInfo($editsubaccountrequest)
     {
-        // verify the required parameter 'keyid' is set
-        if ($keyid === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $keyid when calling getCredit');
-        }
-        // verify the required parameter 'credit' is set
-        if ($credit === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $credit when calling getCredit');
+        // verify the required parameter 'editsubaccountrequest' is set
+        if ($editsubaccountrequest === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $editsubaccountrequest when calling subaccountEdit');
         }
         // parse inputs
-        $resourcePath = "/credit";
+        $resourcePath = "/subaccount";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -133,15 +127,12 @@ class CreditApi
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
-        // query params
-        if ($keyid !== null) {
-            $queryParams['keyid'] = $this->apiClient->getSerializer()->toQueryValue($keyid);
-        }
-        // query params
-        if ($credit !== null) {
-            $queryParams['credit'] = $this->apiClient->getSerializer()->toQueryValue($credit);
+        // body params
+        $_tempBody = null;
+        if (isset($editsubaccountrequest)) {
+            $_tempBody = $editsubaccountrequest;
         }
 
         // for model (json/xml)
@@ -154,19 +145,19 @@ class CreditApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'GET',
+                'PUT',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Isendpro\Model\CreditResponse',
-                '/credit'
+                '\Isendpro\Model\SubaccountResponse',
+                '/subaccount'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Isendpro\Model\CreditResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Isendpro\Model\SubaccountResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Isendpro\Model\CreditResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Isendpro\Model\SubaccountResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 400:

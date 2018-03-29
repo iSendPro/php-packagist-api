@@ -1,6 +1,6 @@
 <?php
 /**
- * Erreur
+ * ShortlinkResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Isendpro\Model;
 use \ArrayAccess;
 
 /**
- * Erreur Class Doc Comment
+ * ShortlinkResponse Class Doc Comment
  *
  * @category    Class
  * @package     Isendpro
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Erreur implements ArrayAccess
+class ShortlinkResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,14 @@ class Erreur implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Erreur';
+    protected static $swaggerModelName = 'ShortlinkResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'etat' => '\Isendpro\Model\ErreurEtat'
+        'etat' => '\Isendpro\Model\ShortlinkResponseEtat'
     ];
 
     /**
@@ -162,7 +162,7 @@ class Erreur implements ArrayAccess
 
     /**
      * Gets etat
-     * @return \Isendpro\Model\ErreurEtat
+     * @return \Isendpro\Model\ShortlinkResponseEtat
      */
     public function getEtat()
     {
@@ -171,7 +171,7 @@ class Erreur implements ArrayAccess
 
     /**
      * Sets etat
-     * @param \Isendpro\Model\ErreurEtat $etat
+     * @param \Isendpro\Model\ShortlinkResponseEtat $etat
      * @return $this
      */
     public function setEtat($etat)

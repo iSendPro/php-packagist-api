@@ -1,6 +1,6 @@
 <?php
 /**
- * Erreur
+ * ShortlinkRequest
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Isendpro\Model;
 use \ArrayAccess;
 
 /**
- * Erreur Class Doc Comment
+ * ShortlinkRequest Class Doc Comment
  *
  * @category    Class
  * @package     Isendpro
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Erreur implements ArrayAccess
+class ShortlinkRequest implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,15 @@ class Erreur implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Erreur';
+    protected static $swaggerModelName = 'ShortlinkRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'etat' => '\Isendpro\Model\ErreurEtat'
+        'keyid' => 'string',
+        'shortlink' => 'string'
     ];
 
     /**
@@ -62,7 +63,8 @@ class Erreur implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'etat' => null
+        'keyid' => null,
+        'shortlink' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class Erreur implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'etat' => 'etat'
+        'keyid' => 'keyid',
+        'shortlink' => 'shortlink'
     ];
 
 
@@ -89,7 +92,8 @@ class Erreur implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'etat' => 'setEtat'
+        'keyid' => 'setKeyid',
+        'shortlink' => 'setShortlink'
     ];
 
 
@@ -98,7 +102,8 @@ class Erreur implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'etat' => 'getEtat'
+        'keyid' => 'getKeyid',
+        'shortlink' => 'getShortlink'
     ];
 
     public static function attributeMap()
@@ -132,7 +137,8 @@ class Erreur implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['etat'] = isset($data['etat']) ? $data['etat'] : null;
+        $this->container['keyid'] = isset($data['keyid']) ? $data['keyid'] : null;
+        $this->container['shortlink'] = isset($data['shortlink']) ? $data['shortlink'] : null;
     }
 
     /**
@@ -144,6 +150,12 @@ class Erreur implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['keyid'] === null) {
+            $invalid_properties[] = "'keyid' can't be null";
+        }
+        if ($this->container['shortlink'] === null) {
+            $invalid_properties[] = "'shortlink' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -156,27 +168,54 @@ class Erreur implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['keyid'] === null) {
+            return false;
+        }
+        if ($this->container['shortlink'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets etat
-     * @return \Isendpro\Model\ErreurEtat
+     * Gets keyid
+     * @return string
      */
-    public function getEtat()
+    public function getKeyid()
     {
-        return $this->container['etat'];
+        return $this->container['keyid'];
     }
 
     /**
-     * Sets etat
-     * @param \Isendpro\Model\ErreurEtat $etat
+     * Sets keyid
+     * @param string $keyid
      * @return $this
      */
-    public function setEtat($etat)
+    public function setKeyid($keyid)
     {
-        $this->container['etat'] = $etat;
+        $this->container['keyid'] = $keyid;
+
+        return $this;
+    }
+
+    /**
+     * Gets shortlink
+     * @return string
+     */
+    public function getShortlink()
+    {
+        return $this->container['shortlink'];
+    }
+
+    /**
+     * Sets shortlink
+     * @param string $shortlink
+     * @return $this
+     */
+    public function setShortlink($shortlink)
+    {
+        $this->container['shortlink'] = $shortlink;
 
         return $this;
     }

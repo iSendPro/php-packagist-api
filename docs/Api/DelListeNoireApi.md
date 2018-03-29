@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **delListeNoire**
-> \Isendpro\Model\LISTENOIREReponse delListeNoire($keyid, $delliste_noire, $num)
+> \Isendpro\Model\LISTENOIREReponse delListeNoire($keyid, $del_liste_noire, $num)
 
 Ajoute un numero en liste noire
 
@@ -21,11 +21,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Isendpro\Api\DelListeNoireApi();
 $keyid = "keyid_example"; // string | Clé API
-$delliste_noire = "delliste_noire_example"; // string | Doit valoir \"1\"
+$del_liste_noire = "del_liste_noire_example"; // string | Doit valoir \"1\"
 $num = "num_example"; // string | numéro de mobile à supprimer
 
 try {
-    $result = $api_instance->delListeNoire($keyid, $delliste_noire, $num);
+    $result = $api_instance->delListeNoire($keyid, $del_liste_noire, $num);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DelListeNoireApi->delListeNoire: ', $e->getMessage(), PHP_EOL;
@@ -38,7 +38,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **keyid** | **string**| Clé API |
- **delliste_noire** | **string**| Doit valoir \&quot;1\&quot; |
+ **del_liste_noire** | **string**| Doit valoir \&quot;1\&quot; |
  **num** | **string**| numéro de mobile à supprimer |
 
 ### Return type
