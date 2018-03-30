@@ -1,6 +1,6 @@
 <?php
 /**
- * ErreurEtatEtatTest
+ * SubaccountRequestTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Isendpro;
 
 /**
- * ErreurEtatEtatTest Class Doc Comment
+ * SubaccountRequestTest Class Doc Comment
  *
  * @category    Class */
-// * @description ErreurEtatEtat
+// * @description SubaccountRequest
 /**
  * @package     Isendpro
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ErreurEtatEtatTest extends \PHPUnit_Framework_TestCase
+class SubaccountRequestTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,23 +71,65 @@ class ErreurEtatEtatTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ErreurEtatEtat"
+     * Test "SubaccountRequest"
      */
-    public function testErreurEtatEtat()
+    public function testSubaccountRequest()
     {
     }
 
     /**
-     * Test attribute "code"
+     * Test attribute "keyid"
      */
-    public function testPropertyCode()
+    public function testPropertyKeyid()
     {
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "sub_account_edit"
      */
-    public function testPropertyMessage()
+    public function testPropertySubAccountEdit()
+    {
+    }
+
+    /**
+     * Test attribute "sub_account_key_id"
+     */
+    public function testPropertySubAccountKeyId()
+    {
+    }
+
+    /**
+     * Test attribute "sub_account_add_credit"
+     */
+    public function testPropertySubAccountAddCredit()
+    {
+    }
+
+    /**
+     * Test attribute "sub_account_restriction_stop"
+     */
+    public function testPropertySubAccountRestrictionStop()
+    {
+    }
+
+    /**
+     * Test attribute "sub_account_restriction_time"
+     */
+    public function testPropertySubAccountRestrictionTime()
+    {
+    }
+
+    /**
+     * Test attribute "sub_account_price"
+     */
+    public function testPropertySubAccountPrice()
+    {
+    }
+
+    /**
+     * Test attribute "sub_account_country_code"
+     */
+    public function testPropertySubAccountCountryCode()
     {
     }
 }

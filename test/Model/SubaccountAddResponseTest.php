@@ -1,6 +1,6 @@
 <?php
 /**
- * ErreurEtatEtatTest
+ * SubaccountAddResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Isendpro;
 
 /**
- * ErreurEtatEtatTest Class Doc Comment
+ * SubaccountAddResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description ErreurEtatEtat
+// * @description SubaccountAddResponse
 /**
  * @package     Isendpro
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ErreurEtatEtatTest extends \PHPUnit_Framework_TestCase
+class SubaccountAddResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,23 +71,16 @@ class ErreurEtatEtatTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ErreurEtatEtat"
+     * Test "SubaccountAddResponse"
      */
-    public function testErreurEtatEtat()
+    public function testSubaccountAddResponse()
     {
     }
 
     /**
-     * Test attribute "code"
+     * Test attribute "etat"
      */
-    public function testPropertyCode()
-    {
-    }
-
-    /**
-     * Test attribute "message"
-     */
-    public function testPropertyMessage()
+    public function testPropertyEtat()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ErreurEtatEtatTest
+ * ShortlinkResponseEtatEtatTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace Isendpro;
 
 /**
- * ErreurEtatEtatTest Class Doc Comment
+ * ShortlinkResponseEtatEtatTest Class Doc Comment
  *
  * @category    Class */
-// * @description ErreurEtatEtat
+// * @description ShortlinkResponseEtatEtat
 /**
  * @package     Isendpro
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ErreurEtatEtatTest extends \PHPUnit_Framework_TestCase
+class ShortlinkResponseEtatEtatTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class ErreurEtatEtatTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ErreurEtatEtat"
+     * Test "ShortlinkResponseEtatEtat"
      */
-    public function testErreurEtatEtat()
+    public function testShortlinkResponseEtatEtat()
     {
     }
 
@@ -88,6 +88,13 @@ class ErreurEtatEtatTest extends \PHPUnit_Framework_TestCase
      * Test attribute "message"
      */
     public function testPropertyMessage()
+    {
+    }
+
+    /**
+     * Test attribute "shortlink"
+     */
+    public function testPropertyShortlink()
     {
     }
 }
